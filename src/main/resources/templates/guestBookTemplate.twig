@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/guestBookStyle.css"/>
+    <title>My guestbook</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>MY GUESTBOOK</h1>
+
+        {% for post in posts %}
+            <div class="post">
+                <p class="first-p">{{ post.getMessage() }}</p>
+                <p>Name: {{ post.getName() }}</p>
+                <p>Date: {{ post.getDate() }}</p>
+            </div>
+        {% endfor %}
+
+        <div class="form-container">
+
+            <form method="POST">
+
+                <label for="user-message">Message</label>
+                <textarea class="user-message" name="user-message" id="message"></textarea>
+
+                <label for="user-name">Name</label>
+                <input class="user-name" id="name" name="user-name" type="text">
+
+                <div id="button">
+                    <button type="submit">SUBMIT</button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+* {
+    font-family: arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    width: 20%;
+    margin-top: 2em;
+
+}
+
+form > input, textarea {
+    margin-bottom: 1em;
+}
+
+form > textarea {
+    min-height: 4em;
+}
+
+form > input {
+    min-height: 1.5em;
+}
+
+.post > p {
+    display: block;
+    margin: 0 0 0.5em 0;
+}
+
+.post {
+    margin-bottom: 1em;
+}
+
+.first-p{
+    font-weight: bold;
+}
